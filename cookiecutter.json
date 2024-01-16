@@ -1,10 +1,14 @@
 {
   "project_name": "Project X",
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
-  "package_name" : "mypkg",
-  "contact_name"   : "Jane Silo",
+  "package_name": "mypkg",
+  "contact_name": "Ville Viitaniemi",
   "contact_email": "firstname.lastname@silo.ai",
   "project_short_description": "Short description of the project",
-  "use_bitbucket_pipelines": "y",
-  "use_precommit_hook": ["Minimal", "Pytest", "None"]
+  "use_bitbucket_pipelines": "n",
+  "use_precommit_hook": [
+    "Minimal",
+    "Pytest",
+    "None"
+  ]
 }
