@@ -9,14 +9,18 @@
 - [`dev-requirements.txt`](./dev-requirements.txt): Optional dependencies for development
 - [`src`](./src): Package source code stored in [`src-layout`](https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#src-layout)
 - [`notebooks`](./notebooks): Jupyter notebooks and other interactive documents
+- convenience scripts (to be run in the project's root directory)
+    - `./create-env` creates a new conda environment for the project (name {{ cookiecutter.project_slug }})
+    - `source activate-env` activates the project's conda environment in the current shell
+    - `source pip-install` installs the project package into the conda env
+    - `source freeze-env` documents the conda env for reproducing
+
 
 ## Development
 
-1. Create new virtual environment
-1. Upgrade pip: `pip install --upgrade pip`
-1. Install the package in [editable mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html): `pip install -e '.[dev]'`
-{% if cookiecutter.use_precommit_hook == 'y' -%}
-1. Install pre-commit hook: `pre-commit install` or to only run pre-push: `pre-commit install --hook-type pre-push`
+1. Create conda environment for the project (`./create-env`)
+1. Install the local package in [editable mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html) 
+1. Install pre-commit hook after activating the environment: `pre-commit install` or to only run pre-push: `pre-commit install --hook-type pre-push`
 {%- endif %}
 
 ### Tests
