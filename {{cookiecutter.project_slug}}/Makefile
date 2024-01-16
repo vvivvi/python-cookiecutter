@@ -4,6 +4,7 @@ create-env:
 	conda create --name {{ cookiecutter.project_slug }} python
 
 activate-env:
+	conda init
 	conda activate {{ cookiecutter.project_slug }}
 
 freeze-env: activate-env
@@ -11,5 +12,4 @@ freeze-env: activate-env
 
 pip-install: activate-env
 	pip install -e .
-	
-			
+
