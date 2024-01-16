@@ -1,0 +1,2 @@
+conda activate {{ cookiecutter.project_slug }}
+conda env export > environment.yml
