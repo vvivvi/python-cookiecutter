@@ -19,7 +19,8 @@
 ## Development
 
 1. Create conda environment for the project (`./create-env`)
-1. Install the local package in [editable mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html) 
+1. Install the local package in [editable mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html) (`source pip-install`)
+{% if cookiecutter.use_precommit_hook == 'y' -%}
 1. Install pre-commit hook after activating the environment: `pre-commit install` or to only run pre-push: `pre-commit install --hook-type pre-push`
 {%- endif %}
 
